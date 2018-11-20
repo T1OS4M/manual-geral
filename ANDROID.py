@@ -1,3 +1,5 @@
+#Copyright (C) 2018
+
 import time
 
 print('''\033[32m
