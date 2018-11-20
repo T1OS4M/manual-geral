@@ -35,17 +35,18 @@ while True:
     Comando          Descrição
     -------          -----------
     activity_start    Inicie uma atividade do Android a partir de uma string Uri
-    check_root        Verifique se o dispositivo está enraizado
+    check_root        Verifique se o dispositivo tem root
     dump_calllog      Obter registro de chamadas
     dump_contacts     Obter lista de contatos
     dump_sms          Obter mensagens sms
-    geolocate         Obtenha o lat atual usando a geolocalizaçãoreOcultar o ícone do aplicativo no iniciador
+    geolocate         Obtenha a latitude atual usando a geolocalização
+    hide_app_icon     Ocultar o ícone do aplicativo no iniciador
     interval_collect  Gerenciar recursos de coleta de intervalo
-    send_sms          Envia SMS da sessão de destino
+    send_sms          Envia SMS da sessão de destino |EX: send_sms -d 1122334455 -t 'gaspar3321'|
     set_audio_mode    Definir o modo de campainha
     sqlite_query      Consultar um banco de dados SQLite do armazenamento
-    wakelock          Ativar / Desativar o Wakelock
-    wlan_geolocate    Obtém o lat atual usando informações de WLAN''')
+    wakelock          Usado para manter a conexão mesmo que o android atacado entre em standby 
+    wlan_geolocate    Obtém a latitude atual usando informações de WLAN''')
     elif opc == 2:
         print('''Comandos de Saída de Áudio
 =============================
@@ -60,11 +61,11 @@ while True:
 
     Comando         Descrição
     -------         -----------
-    record_mic      Grava áudio do microfone padrão por X segundos
-    webcam_chat     Iniciar um bate-papo por vídeo
-    webcam_list     Lista de webcams
-    webcam_snap     Tire um instantâneo da webcam especificada
-    webcam_stream   Reproduz um fluxo de vídeo da webcam especificada
+    record_mic      Grava áudio do microfone padrão por X segundos |EX: record_mic -d 10|
+    webcam_chat     Iniciar um bate-papo por vídeo  |EX: webcam_chat -i 2|
+    webcam_list     Lista de webcams  |USADO PARA OBTER O ID DA CÂMERA| 
+    webcam_snap     Tire um instantâneo da webcam especificada  |EX: webcam_snap -i 2|OBS: O NÚMERO 2 É O ID DA CÃMERA|
+    webcam_stream   Reproduz um fluxo de vídeo da webcam especificada  |EX: webcam_stream -i 2
 ''')
     elif opc == 4:
         print('''Comandos da interface do usuário
@@ -72,7 +73,7 @@ while True:
 
     Comando              Descrição
     -------              -----------
-    screenshot      Capture uma captura de tela da área de trabalho interativa 
+    screenshot      Capture uma captura de tela da área de trabalho interativa
 ''')
     elif opc == 5:
         print(''' Comandos do sistema
@@ -106,7 +107,7 @@ while True:
     Comando         Descrição
     -------         -----------
     cat             Leia o conteúdo de um arquivo na tela
-    cd              Alterar diretório
+    cd              Entrar em um Diretório ou pasta |EX: cd Downloads
     checksum        Recupera a soma de verificação de um arquivo
     cp              Copiar a origem para o destino
     dir             Listar arquivos (alias para ls)
@@ -131,14 +132,14 @@ while True:
     -------                      -----------
     ?                            Menu de ajuda
     Background                   Backgrounds a sessão atual
-    bgkill                       mata um script de medidor de antecedentes
-    bglist                       Lists executando scripts de plano de fundo
+    bgkill                       Elimina rastros deixados pelo payload|EX: bgkill -i 1
+    bglist                       Lista rastros deixados por você|OBS: USADO JUNTO COM O bgkill
     bgrun                        Executa um script meterpreter como um thread de segundo plano
     channel                      Exibe informações ou controla canais ativos
     close                        Fecha um canal
     disable_unicode_encoding     Desativa a codificação de sequências unicode
     enable_unicode_encoding      Ativa a codificação de sequências unicode
-    exit                         Encerra a sessão do medidor
+    exit                         Encerra a sessão do meterpreter
     get_timeouts                 Obtém os valores de tempo limite da sessão atual
     guid                         Obtenha a sessão GUID
     help                         menu Ajuda
