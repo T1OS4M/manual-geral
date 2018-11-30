@@ -17,7 +17,7 @@ time.sleep(0)
 
 def metasploit():
     while True:
-        print('''\033[36m 
+        print(''' 
         [1]COMANDOS DO ANDROID
         [2]COMANDOS DE AUDIO
         [3]COMANDOS DA WEBCAM
@@ -27,7 +27,7 @@ def metasploit():
         [7]COMANDOS DO SISTEMA DE ARQUIVOS
         [8]COMANDOS PRINCIPAIS
         [9]SAIR''')
-        opc = int(input('\033[31m>>>: \033[m'))
+        opc = int(input('>>>: '))
         if opc == 1:
             print('''Comandos do Android
     ================
@@ -42,7 +42,7 @@ def metasploit():
         geolocate         Obtenha a latitude atual usando a geolocalização
         hide_app_icon     Ocultar o ícone do aplicativo no iniciador
         interval_collect  Gerenciar recursos de coleta de intervalo
-        send_sms          Envia SMS da sessão de destino |EX: send_sms -d 1122334455 -t 'gaspar3321'|
+        send_sms          Envia SMS da sessão de destino\033[31m |EX: send_sms -d 1122334455 -t 'gaspar3321'|\033[m
         set_audio_mode    Definir o modo de campainha
         sqlite_query      Consultar um banco de dados SQLite do armazenamento
         wakelock          Usado para manter a conexão mesmo que o android atacado entre em standby 
@@ -61,11 +61,11 @@ def metasploit():
 
         Comando         Descrição
         -------         -----------
-        record_mic      Grava áudio do microfone padrão por X segundos |EX: record_mic -d 10|
-        webcam_chat     Iniciar um bate-papo por vídeo  |EX: webcam_chat -i 2|
-        webcam_list     Lista de webcams  |USADO PARA OBTER O ID DA CÂMERA| 
-        webcam_snap     Tire um instantâneo da webcam especificada|EX: webcam_snap -i 2|
-        webcam_stream   Reproduz um fluxo de vídeo da webcam especificada  |EX: webcam_stream -i 2
+        record_mic      Grava áudio do microfone padrão por X segundos\033[31m |EX: record_mic -d 10|\033[m
+        webcam_chat     Iniciar um bate-papo por vídeo\033[31m  |EX: webcam_chat -i 2| \033[m
+        webcam_list     Lista de webcams  \033[31m|USADO PARA OBTER O ID DA CÂMERA|\033[m 
+        webcam_snap     Tire um instantâneo da webcam especificada\033[31m|EX: webcam_snap -i 2|\033[m
+        webcam_stream   Reproduz um fluxo de vídeo da webcam especificada  \033[31m|EX: webcam_stream -i 2\033[m
     ''')
         elif opc == 4:
             print('''Comandos da interface do usuário
@@ -132,8 +132,8 @@ def metasploit():
         -------                      -----------
         ?                            Menu de ajuda
         Background                   Backgrounds a sessão atual
-        bgkill                       Elimina rastros deixados pelo payload|EX: bgkill -i 1
-        bglist                       Lista rastros deixados por você|OBS: USADO JUNTO COM O bgkill
+        bgkill                       Elimina rastros deixados pelo payload\033[31m|EX: bgkill -i 1\033[m
+        bglist                       Lista rastros deixados por você\033[31m|OBS: USADO JUNTO COM O bgkill\033[m1
         bgrun                        Executa um script meterpreter como um thread de segundo plano
         channel                      Exibe informações ou controla canais ativos
         close                        Fecha um canal
@@ -160,11 +160,40 @@ def metasploit():
         writes                       Grava dados em um canal''')
         elif opc == 9:
             menu()
+def termux():
+    print('''\n[1]COMANDOS BÁSICOS
+[2]VOLTAR''')
+    z1 = int(input('>>>: '))
+    if z1 == 1:
+        print('''comandos básicos do termux 
+--------------------------
+comandos                        descrição
+--------                        ---------
+apt update:                     Usado para baixar as informações do pacotes configurados.
+apt upgrade:                    É usado para instalar atualizações disponíveis de todos os pacotes. 
+ls:                             Usado para listar diretórios.
+termux-setup-storage:           Garante a permissão de leitura de arquivos.
+cd:                             Usado para navegar entre diretórios\033[31m|EX: cd downloads\033[m
+mv:                             Usado para mover aquivos\033[31m|EX: mv xerxes.c /$HOME\033[m
+rm:                             remove arquivos e diretórios\033[31m|EX: rm xerxes\033[m
+chmod:                          Comando que pode alterar permissões de acesso\033[31m|EX: chmod +x xerxes.c\033[m
+pwd:                            mostra o caminho completo do diretório em que você se encontra.
+cat:                            mostra o conteúdo de um arquivo binário ou texto\033[31m|EX: cat arquivo.txt\033[m
+cd.. :                          Volta ao diretório anterior.
+clear:                          limpa a tela do terminal.
+chmod 777:                      Dá permissão total ao arquivo\033[31m|EX: chmod 777 xerxes.c \033[m
+cp:                             Copia todo o conteúdo do diretório.
+kill:                           Encerra um ou mais processos em andamento.
+rm -rf:                          remove todos os arquivos e subdiretórios do diretório especificado.''')
+        termux()
+    elif z1 == 2:
+        menu()
 def menu():
     print('''\n[1]METASPLOIT
 [2]SQLMAP
 [3]XERXES
-[4]SAIR''')
+[4]COMANDOS DO TERMUX
+[5]SAIR''')
     n = int(input('\n>>>: '))
     if n == 1:
         metasploit()
@@ -173,30 +202,32 @@ def menu():
     elif n == 3:
         xerxes()
     elif n == 4:
+        termux()
+    elif n == 5:
         sys.exit()
 def xerxes():
-    print('''[1]COMANDOS
+    print('''\n[1]COMANDOS
 [2]VOLTAR''')
     n3 = int(input('>>>: '))
     if n3 == 1:
-        print('''(1):| cd xerxes
-        (2):| pkg install clang
-        (3):| clang xerxes.c -o xerxes
-        ($):| ./xerxes (site ou ip)''')
+        print('''\n(1):| cd xerxes
+(2):| pkg install clang
+(3):| clang xerxes.c -o xerxes
+(4):| ./xerxes (\033[31m site ou ip \033[m)''')
         xerxes()
     elif n3 == 2:
         menu()
 def sql():
-    print('''[1]COMANDOS
+    print('''\n[1]COMANDOS
 [2]VOLTAR''')
     n1 = int(input('>>>: '))
     if n1 == 1:
-        print('''(1):| python2 sqlmap.py -u (site sem parênteses) --dbs
-                \n(2):|python2 sqlmap.py -u (site sem parênteses) --dbs -D (nome do dbs) --tables
-                \n(3):|python2 sqlmap.py -u (site sem parênteses) --dbs -D (nome do dbs) -T (nome da tabela) --columns
-                \n(4):|python2 sqlmap.py -u (site sem parênteses) --dbs -D (dbs) -T (tabela) -C (coluna) -- dump
-                \n \033[31m   OBSERVAÇÃO: QUALQUER ERRO DE ESCRITA ALTERA DIRETAMENTE O RESULTADO!
-                                OBSERVE ATENTAMENTE O SEU COMANDO ANTES DE EXECUTÁ-LO! \033[m''')
+        print('''\n(1):| python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs
+                \n(2):|python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs -D (\033[31m nome do dbs \033[m) --tables
+                \n(3):|python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs -D (\033[31m nome do dbs \033[m) -T (\033[31m nome da tabela \033[m) --columns
+                \n(4):|python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs -D (\033[31m dbs \033[m) -T (\033[31m tabela \033[m) -C (\033[31m coluna \033[m) -- dump
+                \n \033[36m   OBSERVAÇÃO: QUALQUER ERRO DE ESCRITA ALTERA DIRETAMENTE O RESULTADO!
+          OBSERVE ATENTAMENTE O SEU COMANDO ANTES DE EXECUTÁ-LO! \033[m''')
         sql()
     elif n1 == 2:
         menu()
