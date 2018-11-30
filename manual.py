@@ -9,26 +9,25 @@ print('''\033[32m
    |   \/   ||        |   |       | \   |     | \   |        |   |       | \ 
    |        ||_ _ _   |   |_ _ _  |  \  |     |  \  |_ _ _   |   |_ _ _  |  \ 
 
-                        \033[35m !!!MADE SIXX66 BY GASPAR!!! \033[0m''')
+                        \033[36m !!!MADE SIXX66 BY GASPAR!!! \033[0m''')
 print('\n CARREGANDO...')
-time.sleep(2)
-time.sleep(0)
+time.sleep(0.5)
 
 
 def metasploit():
     while True:
         print(''' 
-        [1]COMANDOS DO ANDROID
-        [2]COMANDOS DE AUDIO
-        [3]COMANDOS DA WEBCAM
-        [4]COMANDOS DA INTERFACE
-        [5]COMANDOS DO SISTEMA
-        [6]COMANDOS DE REDE
-        [7]COMANDOS DO SISTEMA DE ARQUIVOS
-        [8]COMANDOS PRINCIPAIS
-        [9]SAIR''')
+        [01]COMANDOS DO ANDROID
+        [02]COMANDOS DE AUDIO
+        [03]COMANDOS DA WEBCAM
+        [04]COMANDOS DA INTERFACE
+        [05]COMANDOS DO SISTEMA
+        [06]COMANDOS DE REDE
+        [07]COMANDOS DO SISTEMA DE ARQUIVOS
+        [08]COMANDOS PRINCIPAIS
+        [09]SAIR''')
         opc = int(input('>>>: '))
-        if opc == 1:
+        if opc == 1 or opc == '01':
             print('''Comandos do Android
     ================
 
@@ -47,7 +46,7 @@ def metasploit():
         sqlite_query      Consultar um banco de dados SQLite do armazenamento
         wakelock          Usado para manter a conexão mesmo que o android atacado entre em standby 
         wlan_geolocate    Obtém a latitude atual usando informações de WLAN''')
-        elif opc == 2:
+        elif opc == 2 or opc == '02':
             print('''Comandos de Saída de Áudio
     =============================
 
@@ -55,7 +54,7 @@ def metasploit():
         -------            -----------
         reproduzir         reproduzir um arquivo de áudio no sistema de destino, nada escrito no disco
     ''')
-        elif opc == 3:
+        elif opc == 3 or opc == '03':
             print('''comandos da webcam
     =======================
 
@@ -67,7 +66,7 @@ def metasploit():
         webcam_snap     Tire um instantâneo da webcam especificada\033[31m|EX: webcam_snap -i 2|\033[m
         webcam_stream   Reproduz um fluxo de vídeo da webcam especificada  \033[31m|EX: webcam_stream -i 2\033[m
     ''')
-        elif opc == 4:
+        elif opc == 4 or opc == '04':
             print('''Comandos da interface do usuário
     ===============================
 
@@ -75,7 +74,7 @@ def metasploit():
         -------              -----------
         screenshot      Capture uma captura de tela da área de trabalho interativa
     ''')
-        elif opc == 5:
+        elif opc == 5 or opc == '05':
             print(''' Comandos do sistema
     =======================
 
@@ -89,7 +88,7 @@ def metasploit():
         shell             Drop into a shell de comando do sistema
         sysinfo           Obtém informações sobre o sistema remoto, como SO
     ''')
-        elif opc == 6:
+        elif opc == 6 or opc == '06':
             print('''Comandos de Rede
     ===========================
 
@@ -100,7 +99,7 @@ def metasploit():
         portfwd                Encaminhar uma porta local para um serviço remoto
         route                  Visualizar e modificar a tabela de roteamento
     ''')
-        elif opc == 7:
+        elif opc == 7 or opc == '07':
             print('''Comandos do sistema de arquivos
     ============================
 
@@ -127,7 +126,7 @@ def metasploit():
         search          Pesquisar por arquivos
         upload          Carregar um arquivo ou diretório
     ''')
-        elif opc == 8:
+        elif opc == 8 or opc == '08':
             print('''' Comando                      Descrição
         -------                      -----------
         ?                            Menu de ajuda
@@ -158,13 +157,13 @@ def metasploit():
         use                          o alias obsoleto para "load"
         uuid                         Obter o UUID para a sessão atual
         writes                       Grava dados em um canal''')
-        elif opc == 9:
+        elif opc == 9 or opc == '09':
             menu()
 def termux():
-    print('''\n[1]COMANDOS BÁSICOS
-[2]VOLTAR''')
+    print('''\n[01]COMANDOS BÁSICOS
+[02]VOLTAR''')
     z1 = int(input('>>>: '))
-    if z1 == 1:
+    if z1 == 1 or z1 == '01':
         print('''comandos básicos do termux 
 --------------------------
 comandos                        descrição
@@ -184,52 +183,53 @@ clear:                          limpa a tela do terminal.
 chmod 777:                      Dá permissão total ao arquivo\033[31m|EX: chmod 777 xerxes.c \033[m
 cp:                             Copia todo o conteúdo do diretório.
 kill:                           Encerra um ou mais processos em andamento.
-rm -rf:                          remove todos os arquivos e subdiretórios do diretório especificado.''')
+rm -rf:                         remove todos os arquivos e subdiretórios do diretório especificado.
+unzip:                          descompacta arquivos .zip\033[31m|EX: unzip ngrok.zip \033[m''')
         termux()
-    elif z1 == 2:
+    elif z1 == 2 or z1 == '02':
         menu()
 def menu():
-    print('''\n[1]METASPLOIT
-[2]SQLMAP
-[3]XERXES
-[4]COMANDOS DO TERMUX
-[5]SAIR''')
+    print('''\n[01]METASPLOIT
+[02]SQLMAP
+[03]XERXES
+[04]COMANDOS DO TERMUX
+[05]SAIR''')
     n = int(input('\n>>>: '))
-    if n == 1:
+    if n == 1 or n == '01':
         metasploit()
-    elif n == 2:
+    elif n == 2 or n == '02':
         sql()
-    elif n == 3:
+    elif n == 3 or n == '03':
         xerxes()
-    elif n == 4:
+    elif n == 4 or n == '04':
         termux()
-    elif n == 5:
+    elif n == 5 or n == '05':
         sys.exit()
 def xerxes():
-    print('''\n[1]COMANDOS
-[2]VOLTAR''')
+    print('''\n[01]COMANDOS
+[02]VOLTAR''')
     n3 = int(input('>>>: '))
-    if n3 == 1:
-        print('''\n(1):| cd xerxes
-(2):| pkg install clang
-(3):| clang xerxes.c -o xerxes
-(4):| ./xerxes (\033[31m site ou ip \033[m)''')
+    if n3 == 1 or n3 == '01':
+        print('''\n(01):| cd xerxes
+(02):| pkg install clang
+(03):| clang xerxes.c -o xerxes
+(04):| ./xerxes (\033[31m site ou ip \033[m)''')
         xerxes()
-    elif n3 == 2:
+    elif n3 == 2 or n3 == '02':
         menu()
 def sql():
-    print('''\n[1]COMANDOS
-[2]VOLTAR''')
+    print('''\n[01]COMANDOS
+[02]VOLTAR''')
     n1 = int(input('>>>: '))
-    if n1 == 1:
-        print('''\n(1):| python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs
-                \n(2):|python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs -D (\033[31m nome do dbs \033[m) --tables
-                \n(3):|python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs -D (\033[31m nome do dbs \033[m) -T (\033[31m nome da tabela \033[m) --columns
-                \n(4):|python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs -D (\033[31m dbs \033[m) -T (\033[31m tabela \033[m) -C (\033[31m coluna \033[m) -- dump
+    if n1 == 1 or n1 == '01':
+        print('''\n(01):| python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs
+                \n(02):|python2 sqlmap.py -u (\033[31m site \033[m) --dbs -D (\033[31m dbs \033[m) --tables
+                \n(03):|python2 sqlmap.py -u (\033[31m site \033[m) --dbs -D (\033[31m dbs \033[m) -T (\033[31m tabela \033[m) --columns
+                \n(04):|python2 sqlmap.py -u (\033[31m site \033[m) --dbs -D (\033[31m dbs \033[m) -T (\033[31m tabela \033[m) -C (\033[31m coluna \033[m) -- dump
                 \n \033[36m   OBSERVAÇÃO: QUALQUER ERRO DE ESCRITA ALTERA DIRETAMENTE O RESULTADO!
           OBSERVE ATENTAMENTE O SEU COMANDO ANTES DE EXECUTÁ-LO! \033[m''')
         sql()
-    elif n1 == 2:
+    elif n1 == 2 or n1 == '02':
         menu()
 menu()
 
