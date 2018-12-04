@@ -1,2 +1,2 @@
 # manual-geral
-print(manual.png)
+# manual.png
