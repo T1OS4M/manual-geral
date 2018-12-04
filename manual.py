@@ -1,6 +1,7 @@
 # Copyright (C) 2018
 import sys
 import time
+from modulo1 import *
 
 print('\033[34m   _ _ _ _ \033[m\033[31m°   _ _ _ \033[m')
 time.sleep(0.3)
@@ -12,9 +13,6 @@ print('      |    |  | S4M |')
 time.sleep(0.3)
 print('\033[31m      |    |  |_S4M_|\033[m')
 time.sleep(0.3)
-
-
-
 
 print('\n ... \n')
 time.sleep(0.5)
@@ -39,7 +37,9 @@ def metasploit():
         time.sleep(0.5)
         print('[08]COMANDOS PRINCIPAIS')
         time.sleep(0.5)
-        print('[09]SAIR')
+        print('[09]INSTALAR O METASPLOIT')
+        time.sleep(0.5)
+        print('[99]SAIR')
         time.sleep(0.5)
         opc = int(input('msf: \n'))
         if opc == 1 or opc == '01':
@@ -163,13 +163,15 @@ def metasploit():
         uuid                         Obter o UUID para a sessão atual
         writes                       Grava dados em um canal \n''')
         elif opc == 9 or opc == '09':
+            mts()
+        elif opc == 99:
             menu()
         else:
             print('\033[31m OPÇÃO INVALIDA \033[m \n')
 def termux():
     print('[01]COMANDOS BÁSICOS')
     time.sleep(0.5)
-    print('[02]VOLTAR')
+    print('[99]VOLTAR')
     z1 = int(input('\n trmx: \n'))
     if z1 == 1 or z1 == '01':
         print(''' \033[7;36m COMANDOS BÁSICOS DO TERMUX \033[m
@@ -194,7 +196,7 @@ def termux():
         rm -rf:                         remove todos os arquivos e subdiretórios do diretório especificado.
         unzip:                          descompacta arquivos .zip\033[7;31m|EX: unzip ngrok.zip \033[m \n ''')
         termux()
-    elif z1 == 2 or z1 == '02':
+    elif z1 == 99:
         menu()
     else:
         print('\033[31m OPÇÃO INVALIDA \033[m \n')
@@ -207,7 +209,7 @@ def menu():
     time.sleep(0.5)
     print('[04]COMANDOS DO TERMUX')
     time.sleep(0.5)
-    print('[05]SAIR')
+    print('[00]SAIR')
     time.sleep(0.5)
     n = int(input('\n mnl: \n'))
     if n == 1 or n == '01':
@@ -218,7 +220,7 @@ def menu():
         xerxes()
     elif n == 4 or n == '04':
         termux()
-    elif n == 5 or n == '05':
+    elif n == 00:
         sys.exit()
     else:
         print('\033[31m OPÇÃO INVALIDA \033[m \n')
@@ -226,7 +228,9 @@ def menu():
 def xerxes():
     print('\n[01]COMANDOS')
     time.sleep(0.5)
-    print('[02]VOLTAR')
+    print('[02]INSTALAR')
+    time.sleep(0.5)
+    print('[99]VOLTAR')
     time.sleep(0.5)
     n3 = int(input('\n xrxs: \n'))
     if n3 == 1 or n3 == '01':
@@ -236,13 +240,17 @@ def xerxes():
         print('(04):| ./xerxes (\033[7;31m site ou ip \033[m)')
         xerxes()
     elif n3 == 2 or n3 == '02':
+        xerxesin()
+    elif n3 == 99:
         menu()
     else:
         print('\033[31m OPÇÃO INVALIDA \033[m \n')
 def sql():
     print('[01]COMANDOS')
     time.sleep(0.5)
-    print('[02]VOLTAR')
+    print('[02]INSTALAR')
+    time.sleep(0.5)
+    print('[99]VOLTAR')
     time.sleep(0.5)
     n1 = int(input('\n sql: \n'))
     if n1 == 1 or n1 == '01':
@@ -254,6 +262,8 @@ def sql():
         print('   \033[7;36m OBSERVE ATENTAMENTE O SEU COMANDO ANTES DE EXECUTÁ-LO! \033[m \n')
         sql()
     elif n1 == 2 or n1 == '02':
+        sqlmap()
+    elif n1 == 99:
         menu()
     else:
         print('\033[31m OPÇÃO INVALIDA \033[m \n')
