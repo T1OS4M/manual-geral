@@ -1,7 +1,7 @@
 # Copyright (C) 2018
 import sys
 import time
-from modulo1 import *
+from comp.modulo1 import *
 
 print('\033[34m   _ _ _ _ \033[m\033[31m°   _ _ _ \033[m')
 time.sleep(0.3)
