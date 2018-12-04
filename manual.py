@@ -164,6 +164,8 @@ def metasploit():
         writes                       Grava dados em um canal \n''')
         elif opc == 9 or opc == '09':
             menu()
+        else:
+            print('\033[31m OPÇÃO INVALIDA \033[m \n')
 def termux():
     print('[01]COMANDOS BÁSICOS')
     time.sleep(0.5)
@@ -194,6 +196,8 @@ def termux():
         termux()
     elif z1 == 2 or z1 == '02':
         menu()
+    else:
+        print('\033[31m OPÇÃO INVALIDA \033[m \n')
 def menu():
     print('[01]METASPLOIT')
     time.sleep(0.5)
@@ -216,6 +220,9 @@ def menu():
         termux()
     elif n == 5 or n == '05':
         sys.exit()
+    else:
+        print('\033[31m OPÇÃO INVALIDA \033[m \n')
+        menu()
 def xerxes():
     print('\n[01]COMANDOS')
     time.sleep(0.5)
@@ -230,6 +237,8 @@ def xerxes():
         xerxes()
     elif n3 == 2 or n3 == '02':
         menu()
+    else:
+        print('\033[31m OPÇÃO INVALIDA \033[m \n')
 def sql():
     print('[01]COMANDOS')
     time.sleep(0.5)
@@ -246,4 +255,6 @@ def sql():
         sql()
     elif n1 == 2 or n1 == '02':
         menu()
+    else:
+        print('\033[31m OPÇÃO INVALIDA \033[m \n')
 menu()
