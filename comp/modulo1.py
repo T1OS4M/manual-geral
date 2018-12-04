@@ -2,7 +2,31 @@
 import os
 import sys
 import time
-
+def menu():
+    print('[01]METASPLOIT')
+    time.sleep(0.5)
+    print('[02]SQLMAP')
+    time.sleep(0.5)
+    print('[03]XERXES')
+    time.sleep(0.5)
+    print('[04]COMANDOS DO TERMUX')
+    time.sleep(0.5)
+    print('[00]SAIR')
+    time.sleep(0.5)
+    n = int(input('\n mnl: \n'))
+    if n == 1 or n == '01':
+        metasploit()
+    elif n == 2 or n == '02':
+        sql()
+    elif n == 3 or n == '03':
+        xerxes()
+    elif n == 4 or n == '04':
+        termux()
+    elif n == 00:
+        sys.exit()
+    else:
+        print('\033[31m OPÇÃO INVALIDA \033[m \n')
+        menu()
 def mts():
     print('...Instalando Metasploit...')
     os.system('apt update && apt upgrade')
