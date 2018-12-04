@@ -1,2 +1,2 @@
-# manual-geral
-# manual.png
+## manual-geral
+< img src=  "comp/manual.png" >
