@@ -1,3 +1,3 @@
 ## manual-geral
-## screenshotng
+## Screenshotng
 < img src=  "comp/manual.png" >
