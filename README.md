@@ -1,2 +1,2 @@
 # manual-geral
-#manual.png
+manual.png
