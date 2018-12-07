@@ -2,6 +2,20 @@
 import os
 import sys
 import time
+def banner():
+    print('\033[34m   _ _ _ _ \033[m\033[31m°   _ _ _ \033[m')
+    time.sleep(0.3)
+    print('\033[34m      |    |\033[m  | S4M |      ')
+    time.sleep(0.3)
+    print('\033[34m      |    |\033[m\033[31m  | S4M |\033[m')
+    time.sleep(0.3)
+    print('      |    |  | S4M |')
+    time.sleep(0.3)
+    print('\033[31m      |    |  |_S4M_|\033[m')
+    time.sleep(0.3)
+
+    print('\n ... \n')
+    time.sleep(0.5)
 def backtomenu():
     os.system('python3 manual.py')
 def mts():
