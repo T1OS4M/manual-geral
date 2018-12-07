@@ -27,7 +27,7 @@ def metasploit():
         time.sleep(0.5)
         print('[09]INSTALAR O METASPLOIT')
         time.sleep(0.5)
-        print('[99]SAIR')
+        print('[99]VOLTAR')
         time.sleep(0.5)
         opc = int(input('msf: \n'))
         if opc == 1 or opc == '01':
