@@ -3,19 +3,7 @@ import sys
 import time
 from comp.modulo1 import *
 
-print('\033[34m   _ _ _ _ \033[m\033[31m°   _ _ _ \033[m')
-time.sleep(0.3)
-print('\033[34m      |    |\033[m  | S4M |      ')
-time.sleep(0.3)
-print('\033[34m      |    |\033[m\033[31m  | S4M |\033[m')
-time.sleep(0.3)
-print('      |    |  | S4M |')
-time.sleep(0.3)
-print('\033[31m      |    |  |_S4M_|\033[m')
-time.sleep(0.3)
-
-print('\n ... \n')
-time.sleep(0.5)
+banner()
 
 
 def metasploit():
@@ -172,6 +160,7 @@ def termux():
     print('[01]COMANDOS BÁSICOS')
     time.sleep(0.5)
     print('[99]VOLTAR')
+    time.sleep(0.5)
     z1 = int(input('\n trmx: \n'))
     if z1 == 1 or z1 == '01':
         print(''' \033[7;36m COMANDOS BÁSICOS DO TERMUX \033[m
