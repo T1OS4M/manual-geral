@@ -19,7 +19,7 @@ def banner():
 def backtomenu():
     os.system('python3 manual.py')
 def mts():
-    print('\n...Instalando Metasploit...\n')
+    print('\n\033[36m...Instalando Metasploit...\033[m\n')
     time.sleep(1)
     os.system('apt update && apt upgrade')
     os.system('apt install git')
@@ -29,7 +29,7 @@ def mts():
     time.sleep(0.5)
     backtomenu()
 def sqlmap():
-    print('\n...Instalando sqlmap...\n')
+    print('\n\033[36m...Instalando sqlmap...\033[m\n')
     time.sleep(1)
     os.system('apt update && apt upgrade')
     os.system('apt install git')
@@ -39,7 +39,7 @@ def sqlmap():
     print('\n \033[36m #####>: Terminado!!! \033[m \n')
     backtomenu()
 def xerxesin():
-    print('\n...Instalando xerxes...\n')
+    print('\n\033[36m...Instalando xerxes...\033[m\n')
     time.sleep(1)
     os.system('apt upadte && apt upgrade')
     os.system('apt install git')
